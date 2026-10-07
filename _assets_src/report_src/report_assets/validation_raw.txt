@@ -1,0 +1,3 @@
+Document checking completed. No errors found.
+Команда: java -jar vnu.jar --also-check-css --format text site/*.html site/css/style.css
+Итог: 0 ошибок, 0 предупреждений (vnu 26.10.7, 2026-10-08)

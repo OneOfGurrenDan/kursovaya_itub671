@@ -1,0 +1,1156 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>css</title></head><body>
+<form method="post" enctype="multipart/form-data" action="https://jigsaw.w3.org/css-validator/validator">
+<input type="hidden" name="profile" value="css3svg"><input type="hidden" name="usermedium" value="all"><input type="hidden" name="warning" value="1"><input type="hidden" name="vextwarning" value=""><input type="hidden" name="lang" value="ru">
+<textarea name="text">/* GM GYM — учебный сайт клуба единоборств. Один файл стилей для всех страниц. */
+
+/* === Шрифты (свои файлы из папки fonts/) === */
+/* Oswald — заголовки, меню, кнопки */
+@font-face {
+  font-family: &quot;Oswald&quot;;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/oswald-cyrillic-500-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0301, U+0400-04FF, U+2116;
+}
+@font-face {
+  font-family: &quot;Oswald&quot;;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/oswald-latin-500-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0000-00FF, U+2000-206F, U+20AC;
+}
+@font-face {
+  font-family: &quot;Oswald&quot;;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/oswald-cyrillic-700-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0301, U+0400-04FF, U+2116;
+}
+@font-face {
+  font-family: &quot;Oswald&quot;;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/oswald-latin-700-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0000-00FF, U+2000-206F, U+20AC;
+}
+/* Roboto — основной текст */
+@font-face {
+  font-family: &quot;Roboto&quot;;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/roboto-cyrillic-400-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0301, U+0400-04FF, U+2116;
+}
+@font-face {
+  font-family: &quot;Roboto&quot;;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/roboto-latin-400-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0000-00FF, U+2000-206F, U+20AC;
+}
+@font-face {
+  font-family: &quot;Roboto&quot;;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/roboto-cyrillic-700-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0301, U+0400-04FF, U+2116;
+}
+@font-face {
+  font-family: &quot;Roboto&quot;;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(&quot;../fonts/roboto-latin-700-normal.woff2&quot;) format(&quot;woff2&quot;);
+  unicode-range: U+0000-00FF, U+2000-206F, U+20AC;
+}
+
+/* === Переменные: палитра, шрифты, скругление === */
+:root {
+  --black: #111111;
+  --dark: #1C1C1C;
+  --white: #FFFFFF;
+  --light: #F4F4F4;
+  --text: #1A1A1A;
+  --muted: #555555;
+  --red: #D7140A;
+  --red-dark: #A80F07;
+  --line: #D9D9D9;
+  --green: #1B7F3B;
+  --field-border: #767676;
+  --font-head: &quot;Oswald&quot;, Arial, sans-serif;
+  --font-text: &quot;Roboto&quot;, Arial, sans-serif;
+  --radius: 8px;
+}
+
+/* === База === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--white);
+  /* колонка на всю высоту окна: подвал прижат к низу */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+}
+
+h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--red-dark);
+}
+
+::selection {
+  background: var(--red);
+  color: var(--white);
+}
+
+/* === Контейнер и секции === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 72px 0;
+  /* чтобы заголовок не прятался под шапкой при переходе по якорю */
+  scroll-margin-top: 90px;
+}
+
+.section--gray {
+  background: var(--light);
+}
+
+.section--dark {
+  background: var(--dark);
+  color: var(--white);
+}
+
+/* заголовок секции с красной чертой */
+.section__title::after {
+  content: &quot;&quot;;
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 12px;
+  background: var(--red);
+}
+
+/* === Кнопки === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 28px;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  background: var(--red);
+  border: 2px solid var(--red);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+/* контурная кнопка для тёмного фона */
+.btn--outline {
+  background: transparent;
+  border-color: var(--white);
+}
+
+/* === Шапка === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 3px solid var(--red);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* === Подвал === */
+.footer {
+  padding: 56px 0 24px;
+  color: #E6E6E6;
+  background: var(--black);
+  border-top: 3px solid var(--red);
+}
+
+.footer a {
+  color: var(--white);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+}
+
+.footer__col {
+  flex: 1 1 280px;
+}
+
+.footer__title {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.footer__col p {
+  margin-bottom: 0;
+}
+
+/* ссылки с контактами: удобно нажимать пальцем */
+.footer__col p a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.footer__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu a {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.footer__note {
+  margin: 40px 0 0;
+  padding-top: 20px;
+  font-size: 0.875rem;
+  color: #BDBDBD;
+  border-top: 1px solid #333333;
+}
+
+/* === Главная: первый экран === */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 72px 0;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--black) 55%, #3A0A07 100%);
+}
+
+.hero &gt; .container {
+  width: 100%;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero__text {
+  flex: 1 1 0;
+}
+
+.hero__photo {
+  flex: 1 1 0;
+}
+
+.hero__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 0 var(--red);
+}
+
+.hero__lead {
+  margin-bottom: 32px;
+  font-size: 1.25rem;
+  color: #E6E6E6;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* === Главная: о клубе и удобства === */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.about__text {
+  flex: 1 1 0;
+}
+
+.about__photo {
+  flex: 1 1 0;
+}
+
+.about__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.amenities__title {
+  margin-top: 56px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.amenities li {
+  width: calc((100% - 32px) / 3);
+  padding: 16px 20px;
+  font-weight: 700;
+  background: var(--light);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+/* === Карточки направлений и тренеров === */
+.lead {
+  max-width: 720px;
+  margin-bottom: 32px;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+.cards,
+.trainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* четыре карточки в ряд: (100% - 3 промежутка) / 4 */
+.card,
+.trainer {
+  width: calc((100% - 72px) / 4);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-top: 4px solid var(--black);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* карточка БЖЖ выделена красной рамкой */
+.card--main {
+  border: 2px solid var(--red);
+  border-top: 4px solid var(--red);
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+.trainer {
+  overflow: hidden;
+}
+
+.trainer img {
+  width: 100%;
+}
+
+.trainer figcaption {
+  padding: 12px 16px 16px;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+/* === Главная: фотографии зала === */
+.gallery {
+  display: flex;
+  gap: 24px;
+}
+
+.gallery figure {
+  flex: 1 1 0;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+/* === Видео === */
+.video {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--black);
+  border-radius: var(--radius);
+}
+
+.video__note {
+  max-width: 960px;
+  margin: 16px auto 0;
+  font-size: 0.9375rem;
+  color: #D0D0D0;
+}
+
+/* === Призыв записаться === */
+.cta {
+  padding: 56px 0;
+  text-align: center;
+  color: var(--white);
+  background: var(--red);
+}
+
+.cta h2 {
+  margin-bottom: 24px;
+}
+
+/* белая кнопка для красного фона */
+.btn--light {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+}
+
+/* === Страница БЖЖ: блок «Что такое БЖЖ» === */
+.hero__photo--wide {
+  flex-grow: 1.4;
+}
+
+.note-card {
+  padding: 24px 28px;
+  background: var(--light);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+/* список с красными маркерами */
+.checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist li {
+  position: relative;
+  padding: 6px 0 6px 28px;
+}
+
+.checklist li::before {
+  content: &quot;&quot;;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 12px;
+  height: 12px;
+  background: var(--red);
+}
+
+/* === Страница БЖЖ: расписание === */
+.table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.schedule {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.schedule caption {
+  padding: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.schedule th,
+.schedule td {
+  padding: 12px 16px;
+  text-align: left;
+  border-top: 1px solid var(--line);
+}
+
+.schedule thead th {
+  font-family: var(--font-head);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  border-top: 0;
+}
+
+.schedule tbody th {
+  width: 160px;
+  vertical-align: top;
+  background: var(--light);
+}
+
+/* первая строка каждого дня — жирная линия сверху */
+.schedule .day-first &gt; * {
+  border-top: 2px solid var(--black);
+}
+
+/* подсказка о прокрутке видна только на телефоне */
+.table-hint {
+  display: none;
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.table-note {
+  margin: 16px 0 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+/* === Страница БЖЖ: тренеры и что взять с собой === */
+/* пять карточек в ряд: (100% - 4 промежутка) / 5 */
+.trainers--five .trainer {
+  width: calc((100% - 96px) / 5);
+}
+
+.section--gray .note-card {
+  background: var(--white);
+}
+
+/* === Форма записи === */
+.form {
+  flex: 1 1 0;
+  padding: 32px;
+  background: var(--light);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+.form__note {
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.form__group {
+  margin: 0 0 24px;
+  padding: 20px 24px 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.form__group legend {
+  padding: 0 8px;
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 240px;
+  margin-bottom: 16px;
+}
+
+.field label {
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  min-height: 44px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--white);
+  border: 2px solid var(--field-border);
+  border-radius: 6px;
+}
+
+/* при переходе к ошибке поле не прячется под липкой шапкой */
+.field input,
+.field select,
+.field textarea {
+  scroll-margin-top: 110px;
+}
+
+.field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.hint {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+::placeholder {
+  color: #6B6B6B;
+}
+
+/* подсветка: красная рамка у поля, которое заполняют неверно; зелёная у верного */
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+  border-color: var(--red);
+  background: #FFF5F4;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: var(--green);
+}
+
+/* переключатели */
+.radios {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+
+.radios legend {
+  padding: 0;
+  margin-bottom: 4px;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.radios__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+}
+
+.radios label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.radios input,
+.field--check input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--red);
+}
+
+/* согласие с галочкой */
+.field--check {
+  flex-direction: row;
+  flex: none;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.field--check label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* контурная кнопка для светлого фона («Очистить») */
+.btn--ghost {
+  color: var(--black);
+  background: transparent;
+  border-color: var(--black);
+}
+
+/* === Страница «Заявка отправлена» === */
+/* main — колонка, первый экран растягивается и прижимает подвал вниз */
+.main--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main--column &gt; .hero {
+  flex: 1;
+}
+
+/* === Форма и блок с телефоном рядом === */
+.signup {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.contact-card {
+  flex: 0 0 340px;
+  padding: 28px;
+  color: var(--white);
+  background: var(--dark);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+.contact-card a {
+  color: var(--white);
+}
+
+.contact-card__phone {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* === Адаптив: планшет (768–1023 px) === */
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .hero {
+    padding: 48px 0;
+  }
+
+  /* первый экран и форма: колонки становятся одной */
+  .hero__inner,
+  .signup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .hero__text,
+  .hero__photo,
+  .form,
+  .contact-card {
+    flex: none;
+  }
+
+  /* карточки по две в ряд: (100% - 1 промежуток) / 2 */
+  .card,
+  .trainer,
+  .trainers--five .trainer {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .amenities li {
+    width: calc((100% - 16px) / 2);
+  }
+
+  /* шапка: логотип и кнопка в первой строке, меню — во второй */
+  .header__inner {
+    flex-wrap: wrap;
+    gap: 4px 24px;
+  }
+
+  .header nav {
+    order: 3;
+    width: 100%;
+  }
+}
+
+/* === Адаптив: телефон (до 767 px) === */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .hero {
+    padding: 36px 0 44px;
+  }
+
+  .hero__lead {
+    font-size: 1.125rem;
+  }
+
+  /* на телефоне и «О клубе» идёт в одну колонку */
+  .about {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .about__text,
+  .about__photo {
+    flex: none;
+  }
+
+  /* кнопки на всю ширину */
+  .hero__buttons .btn,
+  .form__actions .btn,
+  .cta .btn {
+    width: 100%;
+  }
+
+  /* шапка: логотип по центру, меню переносится в несколько строк, кнопка во всю ширину */
+  .header {
+    position: static;
+  }
+
+  .header__inner {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  /* кнопка — после меню (у меню order: 3) */
+  .header .btn {
+    order: 4;
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  /* направления и удобства — по одной в ряд, тренеры — по две */
+  .cards,
+  .trainers {
+    gap: 16px;
+  }
+
+  .card,
+  .amenities li {
+    width: 100%;
+  }
+
+  .trainer,
+  .trainers--five .trainer {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .trainer figcaption {
+    padding: 10px 12px 14px;
+    font-size: 0.875rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .form {
+    padding: 20px 16px;
+  }
+
+  .form__group {
+    padding: 16px 16px 4px;
+  }
+
+  .footer {
+    padding-top: 40px;
+  }
+
+  .table-hint {
+    display: block;
+  }
+
+  .schedule th,
+  .schedule td {
+    padding: 10px 12px;
+  }
+
+  .schedule tbody th {
+    width: auto;
+  }
+}
+
+/* === Анимации и эффекты наведения === */
+/* 1. Плавное появление текста и фото на первом экране при загрузке */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__text {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.hero__photo {
+  animation: fade-up 0.8s ease-out 0.2s both;
+}
+
+/* 2. Кнопки: плавная смена цвета и лёгкий подъём */
+.btn {
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.btn:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn--outline:hover {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.btn--light:hover {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+}
+
+.btn--ghost:hover {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+}
+
+/* 3. Карточки: подъём и тень при наведении */
+.card,
+.trainer {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover,
+.card:focus-within,
+.trainer:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* 4. Меню: красное подчёркивание растёт слева направо */
+.menu a::after {
+  content: &quot;&quot;;
+  position: absolute;
+  left: 12px;
+  bottom: 6px;
+  width: 0;
+  height: 3px;
+  background: var(--red);
+  transition: width 0.25s;
+}
+
+.menu a:hover::after,
+.menu a:focus-visible::after,
+.menu a[aria-current=&quot;page&quot;]::after {
+  width: calc(100% - 24px);
+}
+
+/* Для тех, кто отключил анимации в системе, движение выключаем */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .btn:hover,
+  .card:hover,
+  .card:focus-within,
+  .trainer:hover {
+    transform: none;
+  }
+}
+
+/* === Доступность: ссылка «Перейти к содержанию» === */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 20;
+  padding: 12px 20px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--red-dark);
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* main получает фокус при переходе по ссылке, рамка вокруг всей страницы не нужна */
+main:focus {
+  outline: none;
+}
+
+/* === Доступность: видимый фокус с клавиатуры === */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* на красном фоне красная рамка не видна, поэтому белая */
+.cta :focus-visible {
+  outline-color: var(--white);
+}
+</textarea></form><script>document.forms[0].submit()</script></body></html>
