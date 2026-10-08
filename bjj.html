@@ -185,81 +185,92 @@
         <h2 class="section__title">Запись на пробную тренировку</h2>
         <p class="lead">Заполните форму, и администратор перезвонит, чтобы подтвердить время.</p>
 
-        <form class="form" action="thanks.html" method="get">
-          <p class="form__note">Поля, отмеченные звёздочкой (<span aria-hidden="true">*</span>), обязательны для заполнения.</p>
+        <div class="signup">
+          <form class="form" action="thanks.html" method="get">
+            <p class="form__note">Поля, отмеченные звёздочкой (<span aria-hidden="true">*</span>), обязательны для заполнения.</p>
 
-          <!-- Контакты -->
-          <fieldset class="form__group">
-            <legend>Контакты</legend>
-            <div class="form__row">
-              <div class="field">
-                <label for="name">Имя <span aria-hidden="true">*</span></label>
-                <input id="name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Как к вам обращаться" aria-describedby="name-hint">
-                <small id="name-hint" class="hint">Не короче двух символов</small>
+            <!-- Контакты -->
+            <fieldset class="form__group">
+              <legend>Контакты</legend>
+              <div class="form__row">
+                <div class="field">
+                  <label for="name">Имя <span aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" required minlength="2" autocomplete="name" placeholder="Как к вам обращаться" aria-describedby="name-hint">
+                  <small id="name-hint" class="hint">Не короче двух символов</small>
+                </div>
+                <div class="field">
+                  <label for="phone">Телефон <span aria-hidden="true">*</span></label>
+                  <input id="phone" name="phone" type="tel" required pattern="\+?[0-9\s\-\(\)]{10,18}" autocomplete="tel" placeholder="+7 999 123-45-67" aria-describedby="phone-hint">
+                  <small id="phone-hint" class="hint">Например: +7 999 123-45-67</small>
+                </div>
               </div>
               <div class="field">
-                <label for="phone">Телефон <span aria-hidden="true">*</span></label>
-                <input id="phone" name="phone" type="tel" required pattern="\+?[0-9\s\-\(\)]{10,18}" autocomplete="tel" placeholder="+7 999 123-45-67" aria-describedby="phone-hint">
-                <small id="phone-hint" class="hint">Например: +7 999 123-45-67</small>
-              </div>
-            </div>
-            <div class="field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.ru" aria-describedby="email-hint">
-              <small id="email-hint" class="hint">Необязательное поле</small>
-            </div>
-          </fieldset>
-
-          <!-- Тренировка -->
-          <fieldset class="form__group">
-            <legend>Тренировка</legend>
-            <div class="form__row">
-              <div class="field">
-                <label for="group">Группа <span aria-hidden="true">*</span></label>
-                <select id="group" name="group" required>
-                  <option value="">Выберите группу</option>
-                  <option value="adults">Взрослые</option>
-                  <option value="kids">Дети</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="time">Удобное время</label>
-                <select id="time" name="time">
-                  <option value="any">Не важно</option>
-                  <option value="morning">Утро</option>
-                  <option value="day">День</option>
-                  <option value="evening">Вечер</option>
-                  <option value="weekend">Выходные</option>
-                </select>
-              </div>
-            </div>
-
-            <fieldset class="radios">
-              <legend>Опыт в единоборствах <span aria-hidden="true">*</span></legend>
-              <div class="radios__list">
-                <label><input type="radio" name="level" value="none" required> Нет опыта</label>
-                <label><input type="radio" name="level" value="less-year"> Меньше года</label>
-                <label><input type="radio" name="level" value="more-year"> Больше года</label>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.ru" aria-describedby="email-hint">
+                <small id="email-hint" class="hint">Необязательное поле</small>
               </div>
             </fieldset>
 
-            <div class="field">
-              <label for="comment">Комментарий</label>
-              <textarea id="comment" name="comment" rows="4" placeholder="Ваш вопрос или пожелание"></textarea>
+            <!-- Тренировка -->
+            <fieldset class="form__group">
+              <legend>Тренировка</legend>
+              <div class="form__row">
+                <div class="field">
+                  <label for="group">Группа <span aria-hidden="true">*</span></label>
+                  <select id="group" name="group" required>
+                    <option value="">Выберите группу</option>
+                    <option value="adults">Взрослые</option>
+                    <option value="kids">Дети</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="time">Удобное время</label>
+                  <select id="time" name="time">
+                    <option value="any">Не важно</option>
+                    <option value="morning">Утро</option>
+                    <option value="day">День</option>
+                    <option value="evening">Вечер</option>
+                    <option value="weekend">Выходные</option>
+                  </select>
+                </div>
+              </div>
+
+              <fieldset class="radios">
+                <legend>Опыт в единоборствах <span aria-hidden="true">*</span></legend>
+                <div class="radios__list">
+                  <label><input type="radio" name="level" value="none" required> Нет опыта</label>
+                  <label><input type="radio" name="level" value="less-year"> Меньше года</label>
+                  <label><input type="radio" name="level" value="more-year"> Больше года</label>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Ваш вопрос или пожелание"></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Согласие и кнопки -->
+            <div class="field field--check">
+              <input id="agree" name="agree" type="checkbox" value="yes" required>
+              <label for="agree">Согласен на обработку персональных данных <span aria-hidden="true">*</span></label>
             </div>
-          </fieldset>
 
-          <!-- Согласие и кнопки -->
-          <div class="field field--check">
-            <input id="agree" name="agree" type="checkbox" value="yes" required>
-            <label for="agree">Согласен на обработку персональных данных <span aria-hidden="true">*</span></label>
-          </div>
+            <div class="form__actions">
+              <button class="btn" type="submit">Отправить заявку</button>
+              <button class="btn btn--ghost" type="reset">Очистить</button>
+            </div>
+          </form>
 
-          <div class="form__actions">
-            <button class="btn" type="submit">Отправить заявку</button>
-            <button class="btn btn--ghost" type="reset">Очистить</button>
-          </div>
-        </form>
+          <!-- Контакты рядом с формой -->
+          <aside class="contact-card">
+            <h3>Остались вопросы?</h3>
+            <p>Позвоните администратору:</p>
+            <p><a class="contact-card__phone" href="tel:+74993501818">+7 (499) 350-18-18</a></p>
+            <p>Стоимость абонементов уточняйте по телефону.</p>
+            <p>Москва, ул. Скаковая, 36, м. Белорусская</p>
+          </aside>
+        </div>
       </div>
     </section>
   </main>

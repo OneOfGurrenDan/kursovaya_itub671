@@ -641,7 +641,7 @@ a {
 
 /* === Форма записи === */
 .form {
-  max-width: 800px;
+  flex: 1 1 0;
   padding: 32px;
   background: var(--light);
   border-top: 4px solid var(--red);
@@ -802,4 +802,90 @@ input:valid:not(:placeholder-shown) {
 
 .main--column > .hero {
   flex: 1;
+}
+
+/* === Форма и блок с телефоном рядом === */
+.signup {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.contact-card {
+  flex: 0 0 340px;
+  padding: 28px;
+  color: var(--white);
+  background: var(--dark);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+.contact-card a {
+  color: var(--white);
+}
+
+.contact-card__phone {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* === Адаптив: планшет (768–1023 px) === */
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .hero {
+    padding: 48px 0;
+  }
+
+  /* колонки становятся одной: текст, затем фото */
+  .hero__inner,
+  .about,
+  .signup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .hero__text,
+  .hero__photo,
+  .about__text,
+  .about__photo,
+  .form,
+  .contact-card {
+    flex: none;
+  }
+
+  /* карточки по две в ряд: (100% - 1 промежуток) / 2 */
+  .card,
+  .trainer,
+  .trainers--five .trainer {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .amenities li {
+    width: calc((100% - 16px) / 2);
+  }
+
+  /* шапка: логотип и кнопка в первой строке, меню — во второй */
+  .header__inner {
+    flex-wrap: wrap;
+    gap: 4px 24px;
+  }
+
+  .header nav {
+    order: 3;
+    width: 100%;
+  }
 }
