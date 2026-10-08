@@ -1071,3 +1071,36 @@ input:valid:not(:placeholder-shown) {
     transform: none;
   }
 }
+
+/* === Доступность: ссылка «Перейти к содержанию» === */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 20;
+  padding: 12px 20px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--red-dark);
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* main получает фокус при переходе по ссылке, рамка вокруг всей страницы не нужна */
+main:focus {
+  outline: none;
+}
+
+/* === Доступность: видимый фокус с клавиатуры === */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* на красном фоне красная рамка не видна, поэтому белая */
+.cta :focus-visible {
+  outline-color: var(--white);
+}
