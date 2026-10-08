@@ -31,22 +31,89 @@
   <main id="main">
     <!-- Первый экран страницы -->
     <section class="hero">
-      <div class="container">
-        <h1>Бразильское джиу-джитсу (БЖЖ)</h1>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>Бразильское джиу-джитсу (БЖЖ)</h1>
+          <p class="hero__lead">Борьба в партере, болевые и удушающие приёмы. Группы для взрослых и детей в зале Б клуба GM GYM.</p>
+          <div class="hero__buttons">
+            <a class="btn" href="#signup">Записаться</a>
+            <a class="btn btn--outline" href="#schedule">Расписание</a>
+          </div>
+        </div>
+        <figure class="hero__photo hero__photo--wide">
+          <picture>
+            <source type="image/webp" srcset="images/team-2025.webp">
+            <img src="images/team-2025.jpg" width="800" height="320" alt="Команда клуба GM GYM: четырнадцать человек на красно-чёрном фоне, внизу телефон и адрес клуба">
+          </picture>
+        </figure>
       </div>
     </section>
 
     <!-- Что такое БЖЖ -->
     <section class="section" id="about-bjj">
       <div class="container">
-        <h2>Что такое БЖЖ</h2>
+        <div class="about">
+          <div class="about__text">
+            <h2 class="section__title">Что такое БЖЖ</h2>
+            <p>Бразильское джиу-джитсу — боевое искусство и единоборство. Основной акцент в нём сделан на борьбе в партере, то есть на земле: спортсмены используют болевые и удушающие приёмы.</p>
+            <p>Техника и рычаги позволяют побеждать более тяжёлого соперника. Тренироваться можно в кимоно (ги) и без него (no-gi), в рашгарде.</p>
+          </div>
+          <div class="about__text note-card">
+            <h3>Кому подойдёт</h3>
+            <ul class="checklist">
+              <li>Новичкам с нуля</li>
+              <li>Детям (есть отдельные группы)</li>
+              <li>Тем, кто хочет научиться самообороне</li>
+              <li>Спортсменам ММА</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Расписание -->
-    <section class="section" id="schedule">
+    <section class="section section--gray" id="schedule">
       <div class="container">
-        <h2>Расписание</h2>
+        <h2 class="section__title">Расписание</h2>
+        <div class="table-wrap">
+          <table class="schedule">
+            <caption>Расписание БЖЖ и грэпплинга, зал Б («Зона борьбы и ММА»), октябрь 2026</caption>
+            <thead>
+              <tr>
+                <th scope="col">День</th>
+                <th scope="col">Время</th>
+                <th scope="col">Группа</th>
+                <th scope="col">Тренер</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="day-first"><th scope="row" rowspan="3">Понедельник</th><td>7:30</td><td>БЖЖ</td><td>Георгий Васильев</td></tr>
+            <tr><td>17:00</td><td>БЖЖ дети</td><td>Георгий Васильев</td></tr>
+            <tr><td>19:00</td><td>БЖЖ</td><td>Николай Салмин</td></tr>
+            <tr class="day-first"><th scope="row" rowspan="4">Вторник</th><td>14:30</td><td>БЖЖ</td><td>Николай Салмин</td></tr>
+            <tr><td>19:00</td><td>БЖЖ</td><td>Данил Потеря</td></tr>
+            <tr><td>20:30</td><td>БЖЖ</td><td>Павел Лесин</td></tr>
+            <tr><td>20:30</td><td>Грэпплинг</td><td>Георгий Васильев</td></tr>
+            <tr class="day-first"><th scope="row" rowspan="3">Среда</th><td>7:30</td><td>БЖЖ</td><td>Георгий Васильев</td></tr>
+            <tr><td>17:00</td><td>БЖЖ дети</td><td>Георгий Васильев</td></tr>
+            <tr><td>19:00</td><td>БЖЖ</td><td>Николай Салмин</td></tr>
+            <tr class="day-first"><th scope="row" rowspan="4">Четверг</th><td>14:30</td><td>БЖЖ</td><td>Николай Салмин</td></tr>
+            <tr><td>19:00</td><td>БЖЖ</td><td>Данил Потеря</td></tr>
+            <tr><td>20:30</td><td>БЖЖ</td><td>Павел Лесин</td></tr>
+            <tr><td>20:30</td><td>Грэпплинг</td><td>Георгий Васильев</td></tr>
+            <tr class="day-first"><th scope="row" rowspan="3">Пятница</th><td>7:30</td><td>БЖЖ</td><td>Георгий Васильев</td></tr>
+            <tr><td>17:00</td><td>БЖЖ дети</td><td>Георгий Васильев</td></tr>
+            <tr><td>19:00</td><td>БЖЖ</td><td>Николай Салмин</td></tr>
+            <tr class="day-first"><th scope="row" rowspan="4">Суббота</th><td>9:00</td><td>БЖЖ</td><td>Павел Лесин</td></tr>
+            <tr><td>11:00</td><td>БЖЖ дети</td><td>Амир Аскеров</td></tr>
+            <tr><td>12:30</td><td>БЖЖ</td><td>Данил Потеря</td></tr>
+            <tr><td>12:30</td><td>Грэпплинг</td><td>Георгий Васильев</td></tr>
+            <tr class="day-first"><th scope="row" rowspan="2">Воскресенье</th><td>12:00</td><td>БЖЖ дети</td><td>Амир Аскеров</td></tr>
+            <tr><td>15:00</td><td>БЖЖ</td><td>Николай Салмин</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Расписание по данным клуба на октябрь 2026 г. Уточняйте у администратора.</p>
       </div>
     </section>
 
