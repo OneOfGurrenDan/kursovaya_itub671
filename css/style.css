@@ -326,3 +326,90 @@ a {
   color: #BDBDBD;
   border-top: 1px solid #333333;
 }
+
+/* === Главная: первый экран === */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 72px 0;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--black) 55%, #3A0A07 100%);
+}
+
+.hero > .container {
+  width: 100%;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero__text {
+  flex: 1 1 0;
+}
+
+.hero__photo {
+  flex: 1 1 0;
+}
+
+.hero__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 0 var(--red);
+}
+
+.hero__lead {
+  margin-bottom: 32px;
+  font-size: 1.25rem;
+  color: #E6E6E6;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* === Главная: о клубе и удобства === */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.about__text {
+  flex: 1 1 0;
+}
+
+.about__photo {
+  flex: 1 1 0;
+}
+
+.about__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.amenities__title {
+  margin-top: 56px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.amenities li {
+  width: calc((100% - 32px) / 3);
+  padding: 16px 20px;
+  font-weight: 700;
+  background: var(--light);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+}

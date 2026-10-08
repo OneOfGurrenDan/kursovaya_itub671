@@ -31,15 +31,51 @@
   <main id="main">
     <!-- Первый экран -->
     <section class="hero">
-      <div class="container">
-        <h1>Клуб единоборств GM GYM</h1>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>Клуб единоборств GM GYM</h1>
+          <p class="hero__lead">Москва, м. Белорусская · 800 м² · 8 направлений</p>
+          <div class="hero__buttons">
+            <a class="btn" href="bjj.html#signup">Записаться на пробную</a>
+            <a class="btn btn--outline" href="#directions">Направления</a>
+          </div>
+        </div>
+        <figure class="hero__photo">
+          <picture>
+            <source type="image/webp" srcset="images/hero-ring.webp">
+            <img src="images/hero-ring.jpg" width="700" height="392" alt="Зал клуба GM GYM: подвесные боксёрские мешки с логотипом, обведённым красным кругом, а за ними ринг и рисунок бойцов на стене">
+          </picture>
+        </figure>
       </div>
     </section>
 
     <!-- О клубе -->
     <section class="section" id="about">
       <div class="container">
-        <h2>О клубе</h2>
+        <div class="about">
+          <div class="about__text">
+            <h2 class="section__title">О клубе</h2>
+            <p>GM GYM — клуб единоборств и фитнеса в Москве, на ул. Скаковая, 36 (м. Белорусская). Площадь зала — 800 м².</p>
+            <p>Занятия проходят в трёх зонах: «Зона бокса» (зал А), «Зона борьбы и ММА» и «Зона функционального тренинга» (зал Б). Для детей есть группы по бразильскому джиу-джитсу и тайскому боксу.</p>
+            <p>Стоимость абонементов уточняйте по телефону: <a href="tel:+74993501818">+7 (499) 350-18-18</a>.</p>
+          </div>
+          <figure class="about__photo">
+            <picture>
+              <source type="image/webp" srcset="images/reception.webp">
+              <img src="images/reception.jpg" width="800" height="534" loading="lazy" alt="Стойка ресепшен клуба GM GYM с круглым логотипом и подсветкой, над ней телевизоры на стене">
+            </picture>
+          </figure>
+        </div>
+
+        <h3 class="amenities__title">Удобства в клубе</h3>
+        <ul class="amenities">
+          <li>Бесплатный Wi-Fi</li>
+          <li>Раздевалки</li>
+          <li>Полотенца в аренду</li>
+          <li>Бесплатная экипировка: перчатки, футы, шлемы</li>
+          <li>Бар</li>
+          <li>Зона отдыха</li>
+        </ul>
       </div>
     </section>
 
