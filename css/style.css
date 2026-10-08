@@ -306,7 +306,13 @@ a {
 }
 
 .footer__col p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* ссылки с контактами: удобно нажимать пальцем */
+.footer__col p a {
+  display: inline-block;
+  padding: 6px 0;
 }
 
 .footer__menu {
@@ -623,6 +629,14 @@ a {
   border-top: 2px solid var(--black);
 }
 
+/* подсказка о прокрутке видна только на телефоне */
+.table-hint {
+  display: none;
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
 .table-note {
   margin: 16px 0 0;
   font-size: 0.9375rem;
@@ -698,6 +712,13 @@ a {
   background: var(--white);
   border: 2px solid var(--field-border);
   border-radius: 6px;
+}
+
+/* при переходе к ошибке поле не прячется под липкой шапкой */
+.field input,
+.field select,
+.field textarea {
+  scroll-margin-top: 110px;
 }
 
 .field textarea {
@@ -849,9 +870,8 @@ input:valid:not(:placeholder-shown) {
     padding: 48px 0;
   }
 
-  /* колонки становятся одной: текст, затем фото */
+  /* первый экран и форма: колонки становятся одной */
   .hero__inner,
-  .about,
   .signup {
     flex-direction: column;
     align-items: stretch;
@@ -860,8 +880,6 @@ input:valid:not(:placeholder-shown) {
 
   .hero__text,
   .hero__photo,
-  .about__text,
-  .about__photo,
   .form,
   .contact-card {
     flex: none;
@@ -901,7 +919,8 @@ input:valid:not(:placeholder-shown) {
   }
 
   .container {
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .section {
@@ -914,6 +933,18 @@ input:valid:not(:placeholder-shown) {
 
   .hero__lead {
     font-size: 1.125rem;
+  }
+
+  /* на телефоне и «О клубе» идёт в одну колонку */
+  .about {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .about__text,
+  .about__photo {
+    flex: none;
   }
 
   /* кнопки на всю ширину */
@@ -933,7 +964,9 @@ input:valid:not(:placeholder-shown) {
     gap: 4px;
   }
 
+  /* кнопка — после меню (у меню order: 3) */
   .header .btn {
+    order: 4;
     width: 100%;
     margin: 4px 0;
   }
@@ -973,6 +1006,19 @@ input:valid:not(:placeholder-shown) {
 
   .footer {
     padding-top: 40px;
+  }
+
+  .table-hint {
+    display: block;
+  }
+
+  .schedule th,
+  .schedule td {
+    padding: 10px 12px;
+  }
+
+  .schedule tbody th {
+    width: auto;
   }
 }
 
