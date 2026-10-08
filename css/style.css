@@ -276,3 +276,53 @@ a {
   color: var(--white);
   text-decoration: none;
 }
+
+/* === Подвал === */
+.footer {
+  padding: 56px 0 24px;
+  color: #E6E6E6;
+  background: var(--black);
+  border-top: 3px solid var(--red);
+}
+
+.footer a {
+  color: var(--white);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 64px;
+}
+
+.footer__col {
+  flex: 1 1 280px;
+}
+
+.footer__title {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.footer__col p {
+  margin-bottom: 0.5rem;
+}
+
+.footer__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu a {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.footer__note {
+  margin: 40px 0 0;
+  padding-top: 20px;
+  font-size: 0.875rem;
+  color: #BDBDBD;
+  border-top: 1px solid #333333;
+}
