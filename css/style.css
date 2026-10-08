@@ -975,3 +975,99 @@ input:valid:not(:placeholder-shown) {
     padding-top: 40px;
   }
 }
+
+/* === Анимации и эффекты наведения === */
+/* 1. Плавное появление текста и фото на первом экране при загрузке */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__text {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.hero__photo {
+  animation: fade-up 0.8s ease-out 0.2s both;
+}
+
+/* 2. Кнопки: плавная смена цвета и лёгкий подъём */
+.btn {
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.btn:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn--outline:hover {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.btn--light:hover {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+}
+
+.btn--ghost:hover {
+  color: var(--white);
+  background: var(--black);
+  border-color: var(--black);
+}
+
+/* 3. Карточки: подъём и тень при наведении */
+.card,
+.trainer {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover,
+.card:focus-within,
+.trainer:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* 4. Меню: красное подчёркивание растёт слева направо */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: 6px;
+  width: 0;
+  height: 3px;
+  background: var(--red);
+  transition: width 0.25s;
+}
+
+.menu a:hover::after,
+.menu a:focus-visible::after,
+.menu a[aria-current="page"]::after {
+  width: calc(100% - 24px);
+}
+
+/* Для тех, кто отключил анимации в системе, движение выключаем */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .btn:hover,
+  .card:hover,
+  .card:focus-within,
+  .trainer:hover {
+    transform: none;
+  }
+}
