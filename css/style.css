@@ -627,3 +627,13 @@ a {
   font-size: 0.9375rem;
   color: var(--muted);
 }
+
+/* === Страница БЖЖ: тренеры и что взять с собой === */
+/* пять карточек в ряд: (100% - 4 промежутка) / 5 */
+.trainers--five .trainer {
+  width: calc((100% - 96px) / 5);
+}
+
+.section--gray .note-card {
+  background: var(--white);
+}
