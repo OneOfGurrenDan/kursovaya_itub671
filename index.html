@@ -31,43 +31,202 @@
   <main id="main">
     <!-- Первый экран -->
     <section class="hero">
-      <div class="container">
-        <h1>Клуб единоборств GM GYM</h1>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1>Клуб единоборств GM GYM</h1>
+          <p class="hero__lead">Москва, м. Белорусская · 800 м² · 8 направлений</p>
+          <div class="hero__buttons">
+            <a class="btn" href="bjj.html#signup">Записаться на пробную</a>
+            <a class="btn btn--outline" href="#directions">Направления</a>
+          </div>
+        </div>
+        <figure class="hero__photo">
+          <picture>
+            <source type="image/webp" srcset="images/hero-ring.webp">
+            <img src="images/hero-ring.jpg" width="700" height="392" alt="Зал клуба GM GYM: подвесные боксёрские мешки с логотипом, обведённым красным кругом, а за ними ринг и рисунок бойцов на стене">
+          </picture>
+        </figure>
       </div>
     </section>
 
     <!-- О клубе -->
     <section class="section" id="about">
       <div class="container">
-        <h2>О клубе</h2>
+        <div class="about">
+          <div class="about__text">
+            <h2 class="section__title">О клубе</h2>
+            <p>GM GYM — клуб единоборств и фитнеса в Москве, на ул. Скаковая, 36 (м. Белорусская). Площадь зала — 800 м².</p>
+            <p>Занятия проходят в трёх зонах: «Зона бокса» (зал А), «Зона борьбы и ММА» и «Зона функционального тренинга» (зал Б). Для детей есть группы по бразильскому джиу-джитсу и тайскому боксу.</p>
+            <p>Стоимость абонементов уточняйте по телефону: <a href="tel:+74993501818">+7 (499) 350-18-18</a>.</p>
+          </div>
+          <figure class="about__photo">
+            <picture>
+              <source type="image/webp" srcset="images/reception.webp">
+              <img src="images/reception.jpg" width="800" height="534" loading="lazy" alt="Стойка ресепшен клуба GM GYM с круглым логотипом и подсветкой, над ней телевизоры на стене">
+            </picture>
+          </figure>
+        </div>
+
+        <h3 class="amenities__title">Удобства в клубе</h3>
+        <ul class="amenities">
+          <li>Бесплатный Wi-Fi</li>
+          <li>Раздевалки</li>
+          <li>Полотенца в аренду</li>
+          <li>Бесплатная экипировка: перчатки, футы, шлемы</li>
+          <li>Бар</li>
+          <li>Зона отдыха</li>
+        </ul>
       </div>
     </section>
 
     <!-- Направления -->
-    <section class="section" id="directions">
+    <section class="section section--gray" id="directions">
       <div class="container">
-        <h2>Направления</h2>
+        <h2 class="section__title">Направления</h2>
+        <p class="lead">Восемь направлений: от ударных видов единоборств до борьбы и функционального тренинга.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>ММА</h3>
+            <p>Смешанные единоборства: сочетание ударов и борьбы.</p>
+          </article>
+          <article class="card card--main">
+            <h3>БЖЖ</h3>
+            <p>Борьба в партере, болевые и удушающие приёмы.</p>
+            <a class="card__link" href="bjj.html">Расписание и запись</a>
+          </article>
+          <article class="card">
+            <h3>Грэпплинг</h3>
+            <p>Борьба без ударов: захваты, удержания, болевые приёмы.</p>
+          </article>
+          <article class="card">
+            <h3>Вольная борьба</h3>
+            <p>Броски, захваты и борьба в стойке.</p>
+          </article>
+          <article class="card">
+            <h3>Бокс</h3>
+            <p>Удары руками, защита и работа ног.</p>
+          </article>
+          <article class="card">
+            <h3>Тайский бокс</h3>
+            <p>Удары руками, ногами, коленями и локтями.</p>
+          </article>
+          <article class="card">
+            <h3>Кикбоксинг</h3>
+            <p>Удары руками и ногами.</p>
+          </article>
+          <article class="card">
+            <h3>Функциональный тренинг</h3>
+            <p>Развитие силы, выносливости и координации.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Тренеры -->
     <section class="section" id="trainers">
       <div class="container">
-        <h2>Тренеры</h2>
+        <h2 class="section__title">Тренеры</h2>
+        <p class="lead">Тренеры клуба по разным направлениям.</p>
+        <div class="trainers">
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/gannenko-mma.webp">
+              <img src="images/trainers/gannenko-mma.jpg" width="450" height="450" loading="lazy" alt="Тренер Алексей Ганненко: чёрно-белые портреты с красной надписью «MMA»">
+            </picture>
+            <figcaption><strong>Алексей Ганненко</strong> — ММА</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/karygina-functional.webp">
+              <img src="images/trainers/karygina-functional.jpg" width="450" height="450" loading="lazy" alt="Тренер Валерия Карыгина: чёрно-белые портреты, один с гирей, красная надпись «Функциональный тренинг»">
+            </picture>
+            <figcaption><strong>Валерия Карыгина</strong> — функциональный тренинг</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/evdokimov-muaythai.webp">
+              <img src="images/trainers/evdokimov-muaythai.jpg" width="450" height="450" loading="lazy" alt="Тренер Алексей Евдокимов: чёрно-белые портреты в боксёрской стойке, красная надпись «Тайский бокс»">
+            </picture>
+            <figcaption><strong>Алексей Евдокимов</strong> — тайский бокс</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/peregudov-kickboxing.webp">
+              <img src="images/trainers/peregudov-kickboxing.jpg" width="450" height="450" loading="lazy" alt="Тренер Андрей Перегудов: чёрно-белые портреты, красная надпись «Кикбоксинг»">
+            </picture>
+            <figcaption><strong>Андрей Перегудов</strong> — кикбоксинг</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/myagkov-boxing.webp">
+              <img src="images/trainers/myagkov-boxing.jpg" width="450" height="450" loading="lazy" alt="Тренер Даниил Мягков: чёрно-белые портреты в очках, красная надпись «Бокс»">
+            </picture>
+            <figcaption><strong>Даниил Мягков</strong> — бокс</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/salmin-bjj.webp">
+              <img src="images/trainers/salmin-bjj.jpg" width="450" height="450" loading="lazy" alt="Тренер Николай Салмин: чёрно-белые портреты в кимоно, красная надпись «Бразильское джиу-джитсу»">
+            </picture>
+            <figcaption><strong>Николай Салмин</strong> — бразильское джиу-джитсу</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/tokaev-wrestling.webp">
+              <img src="images/trainers/tokaev-wrestling.jpg" width="450" height="450" loading="lazy" alt="Тренер Вадим Токаев: чёрно-белые портреты, красная надпись «Вольная борьба»">
+            </picture>
+            <figcaption><strong>Вадим Токаев</strong> — вольная борьба</figcaption>
+          </figure>
+          <figure class="trainer">
+            <picture>
+              <source type="image/webp" srcset="images/trainers/klimova-muaythai-women.webp">
+              <img src="images/trainers/klimova-muaythai-women.jpg" width="450" height="450" loading="lazy" alt="Тренер Мария Климова: чёрно-белые портреты в боксёрских перчатках, красная надпись «Тайский бокс женщины»">
+            </picture>
+            <figcaption><strong>Мария Климова</strong> — тайский бокс для женщин</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- Зал -->
-    <section class="section" id="hall">
+    <section class="section section--gray" id="hall">
       <div class="container">
-        <h2>Наш зал</h2>
+        <h2 class="section__title">Наш зал</h2>
+        <div class="gallery">
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="images/hall-bags.webp">
+              <img src="images/hall-bags.jpg" width="460" height="345" loading="lazy" alt="Подвесные боксёрские мешки с логотипом GM GYM в просторном светлом зале, вдали видны тренажёры">
+            </picture>
+            <figcaption>Зал с боксёрскими мешками</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="images/hall-weights.webp">
+              <img src="images/hall-weights.jpg" width="520" height="390" loading="lazy" alt="Гири, гантели и медицинболы на полу, рядом массажный ролл и коврик">
+            </picture>
+            <figcaption>Гири, гантели и медболы</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="images/lounge.webp">
+              <img src="images/lounge.jpg" width="447" height="335" loading="lazy" alt="Зона отдыха клуба: кожаный диван и мягкие кресла-мешки">
+            </picture>
+            <figcaption>Зона отдыха</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- Видео -->
-    <section class="section" id="video">
+    <section class="section section--dark" id="video">
       <div class="container">
-        <h2>Видео о клубе</h2>
+        <h2 class="section__title">Видео о клубе</h2>
+        <video class="video" controls muted preload="none" poster="video/promo-poster.jpg" width="1280" height="720">
+          <source src="video/promo.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео. <a href="video/promo.mp4">Скачать видео</a>.
+        </video>
+        <p class="video__note">Видео из фотографий клуба, без звука. На нём сменяются снимки: зал с рингом, боксёрские мешки, гири и гантели, ресепшен, команда клуба и зона отдыха.</p>
       </div>
     </section>
 
@@ -75,6 +234,7 @@
     <section class="cta">
       <div class="container">
         <h2>Первая тренировка по БЖЖ — запишитесь онлайн</h2>
+        <a class="btn btn--light" href="bjj.html#signup">Записаться</a>
       </div>
     </section>
   </main>

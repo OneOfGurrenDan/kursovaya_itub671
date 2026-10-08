@@ -326,3 +326,216 @@ a {
   color: #BDBDBD;
   border-top: 1px solid #333333;
 }
+
+/* === Главная: первый экран === */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 72px 0;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--black) 55%, #3A0A07 100%);
+}
+
+.hero > .container {
+  width: 100%;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero__text {
+  flex: 1 1 0;
+}
+
+.hero__photo {
+  flex: 1 1 0;
+}
+
+.hero__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 0 var(--red);
+}
+
+.hero__lead {
+  margin-bottom: 32px;
+  font-size: 1.25rem;
+  color: #E6E6E6;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* === Главная: о клубе и удобства === */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.about__text {
+  flex: 1 1 0;
+}
+
+.about__photo {
+  flex: 1 1 0;
+}
+
+.about__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.amenities__title {
+  margin-top: 56px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.amenities li {
+  width: calc((100% - 32px) / 3);
+  padding: 16px 20px;
+  font-weight: 700;
+  background: var(--light);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+/* === Карточки направлений и тренеров === */
+.lead {
+  max-width: 720px;
+  margin-bottom: 32px;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+.cards,
+.trainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* четыре карточки в ряд: (100% - 3 промежутка) / 4 */
+.card,
+.trainer {
+  width: calc((100% - 72px) / 4);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-top: 4px solid var(--black);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* карточка БЖЖ выделена красной рамкой */
+.card--main {
+  border: 2px solid var(--red);
+  border-top: 4px solid var(--red);
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+.trainer {
+  overflow: hidden;
+}
+
+.trainer img {
+  width: 100%;
+}
+
+.trainer figcaption {
+  padding: 12px 16px 16px;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+/* === Главная: фотографии зала === */
+.gallery {
+  display: flex;
+  gap: 24px;
+}
+
+.gallery figure {
+  flex: 1 1 0;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+/* === Видео === */
+.video {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--black);
+  border-radius: var(--radius);
+}
+
+.video__note {
+  max-width: 960px;
+  margin: 16px auto 0;
+  font-size: 0.9375rem;
+  color: #D0D0D0;
+}
+
+/* === Призыв записаться === */
+.cta {
+  padding: 56px 0;
+  text-align: center;
+  color: var(--white);
+  background: var(--red);
+}
+
+.cta h2 {
+  margin-bottom: 24px;
+}
+
+/* белая кнопка для красного фона */
+.btn--light {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+}
