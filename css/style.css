@@ -889,3 +889,89 @@ input:valid:not(:placeholder-shown) {
     width: 100%;
   }
 }
+
+/* === Адаптив: телефон (до 767 px) === */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .hero {
+    padding: 36px 0 44px;
+  }
+
+  .hero__lead {
+    font-size: 1.125rem;
+  }
+
+  /* кнопки на всю ширину */
+  .hero__buttons .btn,
+  .form__actions .btn,
+  .cta .btn {
+    width: 100%;
+  }
+
+  /* шапка: логотип по центру, меню переносится в несколько строк, кнопка во всю ширину */
+  .header {
+    position: static;
+  }
+
+  .header__inner {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .header .btn {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  /* направления и удобства — по одной в ряд, тренеры — по две */
+  .cards,
+  .trainers {
+    gap: 16px;
+  }
+
+  .card,
+  .amenities li {
+    width: 100%;
+  }
+
+  .trainer,
+  .trainers--five .trainer {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .trainer figcaption {
+    padding: 10px 12px 14px;
+    font-size: 0.875rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .form {
+    padding: 20px 16px;
+  }
+
+  .form__group {
+    padding: 16px 16px 4px;
+  }
+
+  .footer {
+    padding-top: 40px;
+  }
+}
