@@ -189,16 +189,44 @@
     </section>
 
     <!-- Зал -->
-    <section class="section" id="hall">
+    <section class="section section--gray" id="hall">
       <div class="container">
-        <h2>Наш зал</h2>
+        <h2 class="section__title">Наш зал</h2>
+        <div class="gallery">
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="images/hall-bags.webp">
+              <img src="images/hall-bags.jpg" width="460" height="345" loading="lazy" alt="Подвесные боксёрские мешки с логотипом GM GYM в просторном светлом зале, вдали видны тренажёры">
+            </picture>
+            <figcaption>Зал с боксёрскими мешками</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="images/hall-weights.webp">
+              <img src="images/hall-weights.jpg" width="520" height="390" loading="lazy" alt="Гири, гантели и медицинболы на полу, рядом массажный ролл и коврик">
+            </picture>
+            <figcaption>Гири, гантели и медболы</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="images/lounge.webp">
+              <img src="images/lounge.jpg" width="447" height="335" loading="lazy" alt="Зона отдыха клуба: кожаный диван и мягкие кресла-мешки">
+            </picture>
+            <figcaption>Зона отдыха</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- Видео -->
-    <section class="section" id="video">
+    <section class="section section--dark" id="video">
       <div class="container">
-        <h2>Видео о клубе</h2>
+        <h2 class="section__title">Видео о клубе</h2>
+        <video class="video" controls muted preload="none" poster="video/promo-poster.jpg" width="1280" height="720">
+          <source src="video/promo.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео. <a href="video/promo.mp4">Скачать видео</a>.
+        </video>
+        <p class="video__note">Видео из фотографий клуба, без звука. На нём сменяются снимки: зал с рингом, боксёрские мешки, гири и гантели, ресепшен, команда клуба и зона отдыха.</p>
       </div>
     </section>
 
@@ -206,6 +234,7 @@
     <section class="cta">
       <div class="container">
         <h2>Первая тренировка по БЖЖ — запишитесь онлайн</h2>
+        <a class="btn btn--light" href="bjj.html#signup">Записаться</a>
       </div>
     </section>
   </main>

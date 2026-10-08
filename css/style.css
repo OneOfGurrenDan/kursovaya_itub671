@@ -483,3 +483,59 @@ a {
   font-size: 0.9375rem;
   line-height: 1.4;
 }
+
+/* === Главная: фотографии зала === */
+.gallery {
+  display: flex;
+  gap: 24px;
+}
+
+.gallery figure {
+  flex: 1 1 0;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+/* === Видео === */
+.video {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--black);
+  border-radius: var(--radius);
+}
+
+.video__note {
+  max-width: 960px;
+  margin: 16px auto 0;
+  font-size: 0.9375rem;
+  color: #D0D0D0;
+}
+
+/* === Призыв записаться === */
+.cta {
+  padding: 56px 0;
+  text-align: center;
+  color: var(--white);
+  background: var(--red);
+}
+
+.cta h2 {
+  margin-bottom: 24px;
+}
+
+/* белая кнопка для красного фона */
+.btn--light {
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+}
