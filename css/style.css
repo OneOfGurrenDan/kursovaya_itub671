@@ -80,6 +80,7 @@
   --red-dark: #A80F07;
   --line: #D9D9D9;
   --green: #1B7F3B;
+  --field-border: #767676;
   --font-head: "Oswald", Arial, sans-serif;
   --font-text: "Roboto", Arial, sans-serif;
   --radius: 8px;
@@ -636,4 +637,169 @@ a {
 
 .section--gray .note-card {
   background: var(--white);
+}
+
+/* === Форма записи === */
+.form {
+  max-width: 800px;
+  padding: 32px;
+  background: var(--light);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+}
+
+.form__note {
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.form__group {
+  margin: 0 0 24px;
+  padding: 20px 24px 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.form__group legend {
+  padding: 0 8px;
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 240px;
+  margin-bottom: 16px;
+}
+
+.field label {
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  min-height: 44px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--white);
+  border: 2px solid var(--field-border);
+  border-radius: 6px;
+}
+
+.field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.hint {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+::placeholder {
+  color: #6B6B6B;
+}
+
+/* подсветка: красная рамка у поля, которое заполняют неверно; зелёная у верного */
+input:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+  border-color: var(--red);
+  background: #FFF5F4;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: var(--green);
+}
+
+/* переключатели */
+.radios {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+
+.radios legend {
+  padding: 0;
+  margin-bottom: 4px;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.radios__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+}
+
+.radios label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.radios input,
+.field--check input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--red);
+}
+
+/* согласие с галочкой */
+.field--check {
+  flex-direction: row;
+  flex: none;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.field--check label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* контурная кнопка для светлого фона («Очистить») */
+.btn--ghost {
+  color: var(--black);
+  background: transparent;
+  border-color: var(--black);
+}
+
+/* === Страница «Заявка отправлена» === */
+/* main — колонка, первый экран растягивается и прижимает подвал вниз */
+.main--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main--column > .hero {
+  flex: 1;
 }
