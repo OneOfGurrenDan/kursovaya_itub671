@@ -1093,3 +1093,14 @@ input:valid:not(:placeholder-shown) {
 main:focus {
   outline: none;
 }
+
+/* === Доступность: видимый фокус с клавиатуры === */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* на красном фоне красная рамка не видна, поэтому белая */
+.cta :focus-visible {
+  outline-color: var(--white);
+}
